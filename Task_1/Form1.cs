@@ -26,7 +26,7 @@ namespace Task_1
         {
             InitializeComponent();
 
-            chessSprites = new Bitmap(@"C:\Users\Professional\Desktop\chess.png");
+            chessSprites = new Bitmap("chess.png");
             Image part = new Bitmap(50, 50);
             Graphics g = Graphics.FromImage(part);
             g.DrawImage(chessSprites, new Rectangle(0, 0, 50, 50), 0, 0, 150, 150, GraphicsUnit.Pixel);
@@ -64,7 +64,9 @@ namespace Task_1
                             butt.BackgroundImage = part1;
                             break;
                     }
-                    if (j % 2 == 0 && i % 2 == 0)
+
+                    
+                    if ((i + j) % 2 == 0)
                     {
                         butt.BackColor = Color.White;
                     }
